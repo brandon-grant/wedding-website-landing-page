@@ -17,11 +17,6 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Give crawlers 3 s to read tags, then redirect humans -->
-  <meta http-equiv="refresh" content="3;url=https://www.theknot.com/us/mallary-paitz-and-brandon-grant-sep-2025">
-
-  <link rel="preconnect" href="https://www.theknot.com/us/mallary-paitz-and-brandon-grant-sep-2025">
-
   <!-- Tailwind from CDN for quick styling -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -46,5 +41,22 @@
      class="fade-in inline-block px-6 py-3 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 transition">
     Go now
   </a>
+
+  <script>
+    // ===== Config =====
+    const DEST_URL = "https://www.theknot.com/us/mallary-paitz-and-brandon-grant-sep-2025";
+    const VISITED_KEY = "tg25_seen";
+
+    // ===== Instant redirect on repeat visits =====
+    if (localStorage.getItem(VISITED_KEY) === "1") {
+      window.location.replace(DEST_URL);
+    }
+
+    // ===== Delayed redirect for first‑time visitors =====
+    setTimeout(() => {
+      localStorage.setItem(VISITED_KEY, "1"); // cache the visit
+      window.location.href = DEST_URL;
+    }, 3000);
+  </script>
 </body>
 </html>
