@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brandon & Mallary | September 2025</title>
 
   <!-- Open Graph -->
@@ -16,37 +17,31 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Give crawlers 3 s to read tags, then redirect humans -->
+  <!-- Give crawlers 3 s to read tags, then redirect humans -->
   <meta http-equiv="refresh" content="3;url=https://www.theknot.com/us/mallary-paitz-and-brandon-grant-sep-2025">
 
-  <!-- Tailwind for quick styling (served from CDN) -->
+  <!-- Tailwind from CDN for quick styling -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     @media (prefers-reduced-motion: no-preference) {
-      .fade-in {
-        animation: fade-in 0.6s ease-out both;
-      }
-      @keyframes fade-in {
-        from { opacity: 0; transform: translateY(8px); }
-        to   { opacity: 1; transform: translateY(0); }
-      }
+      .fade-in { animation: fade-in .6s ease-out both; }
+      @keyframes fade-in { from {opacity:0; transform:translateY(8px);} to {opacity:1;} }
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col justify-center items-center bg-stone-50 text-stone-800 p-6">
-
+<body class="min-h-screen flex flex-col justify-center items-center bg-stone-50 text-stone-800 px-4 py-10">
   <img src="https://thegrants2025.com/assets/og-cover.jpg"
        alt="Brandon and Mallary engagement photo"
-       class="w-72 max-w-full rounded-xl shadow-lg fade-in">
+       class="w-full max-w-md md:max-w-lg rounded-xl shadow-lg fade-in">
 
-  <h1 class="mt-6 text-2xl font-semibold fade-in">Redirecting you to our wedding website…</h1>
-  <p class="mt-2 mb-6 text-center max-w-md fade-in">
+  <h1 class="mt-8 text-2xl md:text-3xl font-semibold text-center fade-in">Redirecting you to our wedding website…</h1>
+  <p class="mt-3 mb-8 text-center max-w-md fade-in">
     You’ll be taken to our full site on <strong>The Knot</strong> for schedules, registry &amp; RSVP.
   </p>
 
   <a href="https://www.theknot.com/us/mallary-paitz-and-brandon-grant-sep-2025"
-     class="fade-in inline-block px-5 py-2 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 transition">
+     class="fade-in inline-block px-6 py-3 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 transition">
     Go now
   </a>
 </body>
