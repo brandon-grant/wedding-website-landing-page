@@ -37,39 +37,22 @@
     You’ll be taken to our full site on <strong>The Knot</strong> for schedules, registry &amp; RSVP.
   </p>
 
-  <a id="goBtn" href="#" class="fade-in inline-block px-6 py-3 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 transition">
+  <a href="https://www.theknot.com/us/mallary-paitz-and-brandon-grant-sep-2025"
+     class="fade-in inline-block px-6 py-3 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 transition">
     Go now
   </a>
 
   <script>
-    // ===== Route mapping =====
-    const ROUTES = {
-      ROOT: "https://www.theknot.com/us/mallary-paitz-and-brandon-grant-sep-2025",
-      REGISTRY: "https://www.theknot.com/us/mallary-paitz-and-brandon-grant-sep-2025/registry"
-    };
-
-    // ===== Helper to normalise path =====
-    function cleanPath(p) {
-      return (p || "/").replace(/\/+$/, "").toLowerCase();
-    }
-
-    // ===== Figure out where we are and where to send folks =====
-    const path = cleanPath(window.location.pathname);
-    const isRegistry = path === "/registry" || path.startsWith("/registry/");
-    const DEST_URL = isRegistry ? ROUTES.REGISTRY : ROUTES.ROOT;
-
-    // ===== Local-storage key per destination (avoids bounce loops) =====
-    const VISITED_KEY = isRegistry ? "tg25_seen_registry" : "tg25_seen_root";
+    // ===== Config =====
+    const DEST_URL = "https://www.theknot.com/us/mallary-paitz-and-brandon-grant-sep-2025";
+    const VISITED_KEY = "tg25_seen";
 
     // ===== Instant redirect on repeat visits =====
     if (localStorage.getItem(VISITED_KEY) === "1") {
       window.location.replace(DEST_URL);
     }
 
-    // ===== Update button link now that we know where we’re headed =====
-    document.getElementById("goBtn").href = DEST_URL;
-
-    // ===== Delayed redirect for first-time visitors =====
+    // ===== Delayed redirect for first‑time visitors =====
     setTimeout(() => {
       localStorage.setItem(VISITED_KEY, "1"); // cache the visit
       window.location.href = DEST_URL;
